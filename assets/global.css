@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'AGOptCyrillic Normal';
+    src: local('AGOptCyrillic Normal'), url('@/assets/fonts/agoptcyrillicnormal.ttf') format('truetype');
+}
+
+#app {   
+    font-family: 'AGOptCyrillic Normal' !important;
+}
+html {
+    scroll-behavior: smooth;
+}
