@@ -21,6 +21,8 @@ export default defineNuxtConfig({
     plugins: [
         '@/plugins/vmask.js',
       ],
+      target: 'static',
+      ssr: false,
     axios: {
         baseURL: '/'
       },
