@@ -51,7 +51,7 @@ function changeVisibility(hint) {
         <ModalForm v-if="visible" v-model:visible="visible" />
       </teleport>
       <div class="main-first__title ">
-        <h1>Профессиональное  лечение с гарантией <br /> от срыва</h1>
+        <h1 class="whitespace-nowrap">Профессиональное  лечение<br /> с гарантией  от срыва</h1>
       </div>
       <p class="mt-5 mb-5">АНОНИМНО КРУГЛОСУТОЧНО ДОСТУПНО</p>
       <div class="main-first-subtitle flex flex-col  ">
