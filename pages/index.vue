@@ -9,7 +9,11 @@ const opensFlag = reactive({
 let visible = ref(false)
 let isMounted = ref(false)
 let hints = ref('data_1')
-onMounted(() => { isMounted.value = true })
+
+onMounted(() => { 
+  isMounted.value = true
+  
+})
 function changeVisibility(hint) {
   // Object.keys(opensFlag).forEach(key => opensFlag[key] = false)
   visible.value = true
@@ -18,9 +22,9 @@ function changeVisibility(hint) {
 </script>
 
 <template>
-  <div class="page1 ">
+  <div class="page1 " ref="mainscreen">
    
-    <main data="data_1" class="main-first w-full flex flex-col h-[100vh]  ">
+    <main id="page1" data="data_1" class="main-first w-full flex flex-col h-[100vh]  ">
        <header class="header " id="header">
       <div class="header-logo">
         <img src="../assets/stan_header.svg" alt="" />
@@ -350,9 +354,9 @@ function changeVisibility(hint) {
         <div></div>
       </div>
       <header class="header w-full">
-      <div class="header-logo ">
+      <a class="header-logo " href="#page1" >
         <img src="../assets/stan_header.svg" alt="" />
-      </div>
+      </a>
       <div class="header-center w-ful">
         <div class="flex justify-center items-center h-full duration-200 hover:drop-shadow-md gap-8">
           <a href="#page2" class="text-[1.7rem]  cursor-pointer text-[#73C9F7]">Услуги </a>
@@ -364,7 +368,7 @@ function changeVisibility(hint) {
           <a href="#page4" class="text-[1.7rem] cursor-pointer text-[#73C9F7]">Преимущество </a>
         </div>
       </div>
-      <div class="header-phone">
+      <div class="header-phone" >
         <img class="header-phone__phone" src="../assets/phone.svg" alt="" />
       <p class="text-[#73C9F7] lg:text-[2vw] text-[1.8rem] underline decoration-solid"   >stan-clinic@ya.ru</p>
       </div>
@@ -445,8 +449,8 @@ function changeVisibility(hint) {
   width: max(33%,15rem);
   height: 100%;
   justify-content: center;
-  align-items: center;
-  /* padding-right: 3rem; */
+  align-items: flex-end;
+  padding-right: 3rem;
 }
 
 .header-phone__phone {

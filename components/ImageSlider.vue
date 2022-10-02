@@ -14,7 +14,7 @@ const props= defineProps({
 <template>
 <div class="flex w-full h-full">
     <img src="../assets/right.svg" class="rotate-180 mr-5 cursor-pointer" alt="" @click="srcIndex<props.srcs.length-1?srcIndex++:srcIndex=0">
-    <div class="w-[42vw]">
+    <div class="lg:w-[42vw] sm:w-[48vw]">
         <img :src="props.srcs[srcIndex]" alt="" class="w-full" >
     </div>
     <img src="../assets/right.svg" class="ml-5 cursor-pointer" alt="" @click="0<srcIndex?srcIndex--:srcIndex=props.srcs.length-1">
