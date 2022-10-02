@@ -299,7 +299,7 @@ function changeVisibility(hint) {
       </div>
 
     </main>
-    <main style="background-image: url('./assets/main.png')"
+    <main style="background-image: url('../assets/main.png')"
       class="main-five flex flex-col bg-cover min-h-screen w-full  items-start  justify-between   ">
       <div class="main-five__title flex ml-[7rem] ">
         <h1 class="text-[2rem] font-bold text-[#009748] ml-[5rem] mt-[2rem]">Отзывы</h1>
