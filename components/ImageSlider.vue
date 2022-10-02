@@ -1,10 +1,17 @@
 
 <script setup>
+import image_1 from '@/assets/1.png'
+import image_2 from '@/assets/2.png'
+import image_3 from '@/assets/3.png'
+import image_4 from '@/assets/4.png'
+import image_5 from '@/assets/5.png'
+import image_6 from '@/assets/6.png'
+import image_7 from '@/assets/7.png'
 const props= defineProps({
     srcs:{
         type:Array,
         require:true,
-        default:["assets/1.png","../assets/2.png","../assets/3.png","../assets/4.png","../assets/5.png","../assets/6.png","../assets/7.png",]
+        default:[image_1,image_2,image_3,image_4,image_5,image_6,image_7]
     }
     })
   const srcIndex=ref(0)  
