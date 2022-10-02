@@ -1,11 +1,38 @@
 @font-face {
     font-family: 'AGOptCyrillic Normal';
-    src: local('AGOptCyrillic Normal'), url('@/assets/fonts/agoptcyrillicnormal.ttf') format('truetype');
+	src: url('@/assets/fonts/agoptcyrillic_normal.eot'); /* IE 9 Compatibility Mode */
+	src: url('@/assets/fonts/agoptcyrillic_normal.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('./fonts/AGOptCyrillicNormal.woff2') format('woff2'), /* Super Modern Browsers */
+		url('@/assets/fonts/AGOptCyrillicNormal.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('@/assets/fonts/agoptcyrillic_normal.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('@/assets/fonts/agoptcyrillic_normal.svg#agoptcyrillic_normal') format('svg'); /* Chrome < 4, Legacy iOS */
+ 
 }
 
 #app {   
     font-family: 'AGOptCyrillic Normal' !important;
+  
 }
 html {
+    width:100vw;
+    overflow-x: hidden;
+    /* min-height:400vh; */
+    
+    /* height:auto; */
     scroll-behavior: smooth;
+   
+}
+
+body{
+    width:100%;
+    /* height:500vh; */
+    overflow-x: hidden; 
+
+}
+@media (max-width: 666px){
+    body{
+        min-height:600vh; 
+        /* transform: translateZ(0); */
+        overflow-x: hidden;
+    }
 }

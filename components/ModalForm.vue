@@ -62,10 +62,10 @@ async function  handleSubmit(){
     /* position:absolute; */
     background-color: white;
     border-radius:1rem;
-    width:max(30vw,30%);
-    height:max(35vh,30%);
+    width:max(30vw,20rem);
+    height:max(35vh,17rem);
     z-index:100;
-    /* position :relative; */
+    position :relative;
     border:1px solid rgb(43, 41, 41);
     filter: drop-shadow(10px 15px 4px #206891);
 }
