@@ -29,10 +29,13 @@ async function  handleSubmit(){
         return
     }
     error.value=false
-    await axios.post('/api/message', {
+    await fetch('/api/message',{  headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },method:'POST',body:JSON.stringify({
    name:name.value,
    phone:phone.value
-  })
+  })})
     .then((res) => {
       // On clear le formulaire
       name.value = ''

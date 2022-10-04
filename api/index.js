@@ -8,11 +8,12 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.post('/message', async (req, res) => {
-    console.log(req.body)
+  console.log(req.body)
+   const data=req.body
  const contenuFormulaireContact = `
    <ul>
-     <li>Имя: ${req.body.name}</li>
-     <li>Телефон : ${req.body.phone}</li>
+     <li>Имя: ${data.name}</li>
+     <li>Телефон : ${data.phone}</li>
    </ul>
  `
  // NODEMAILER
@@ -29,7 +30,7 @@ app.post('/message', async (req, res) => {
  const info = await transporter.sendMail({
    from: '"Stan-clinic сообщение с сайта" <stan-clinic@yandex.ru>', // sender address
    to: 'stan-clinic@yandex.ru', // list of receivers
-   subject: `Имя : ${req.body.name} телефон : ${req.body.phone} `, // Subject line
+   subject: `Имя : ${data.name} телефон : ${data.phone} `, // Subject line
    text: '', // plain text body
    html: contenuFormulaireContact // html body
  })
