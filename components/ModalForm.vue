@@ -29,13 +29,13 @@ async function  handleSubmit(){
         return
     }
     error.value=false
-     $fetch(`api/message?name=${name.value}&phone=${phone.value}`, 
+     axios.get(`api/message?name=${name.value}&phone=${phone.value}`, 
     {
     //       headers: {
     //   'Content-Type': 'application/json'
      
     // },
-    method:'GET',
+  
 //     body:JSON.stringify({
 //    name:name.value,
 //    phone:phone.value
