@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       {
         hid: 'description',
         name: 'description',
-        content: 'stan-clinic landing page'
+        content: 'stan-clinic landing'
       }
     ],
     // link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]

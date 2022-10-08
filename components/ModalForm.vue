@@ -29,7 +29,7 @@ async function  handleSubmit(){
         return
     }
     error.value=false
-    await fetch('/api/message',{  headers: {
+    await fetch('api/message', {  headers: {
       'Content-Type': 'application/json'
       // 'Content-Type': 'application/x-www-form-urlencoded',
     },method:'POST',body:JSON.stringify({
@@ -40,6 +40,7 @@ async function  handleSubmit(){
       // On clear le formulaire
       name.value = ''
       phone.value = ''
+      emit('update:visible',false)
     })
     .catch((err) => {
       console.log(err)
