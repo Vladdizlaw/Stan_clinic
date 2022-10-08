@@ -29,7 +29,7 @@ async function  handleSubmit(){
         return
     }
     error.value=false
-    await $fetch('api/message?name='+ name.value+'&phone=$'+phone.value)
+    // await $fetch('api/message?name='+ name.value+'&phone=$'+phone.value)
     // await $fetch(`api/message?name=${name.value}&phone=${phone.value}`)
     // {
     //       headers: {
