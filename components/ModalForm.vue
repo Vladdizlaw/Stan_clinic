@@ -4,7 +4,7 @@
         <img src="../assets/close.svg" class="close" @click="emit('update:visible',false)"/>
         <p class="title">Записаться</p>
         <input class="input" placeholder="Имя" v-model="name" />
-        <input v-maska="'+7 (###) ###-##-##'" class="input" placeholder="Номер телефона" v-model="phone"/>
+        <input v-maska="'+7(###)###-##-##'" class="input" placeholder="Номер телефона" v-model="phone"/>
         <p v-if="error" class="text-red-500">Введите имя и телефон</p>
         <p class="message">Нажимая на кнопку «Отправить» вы соглашаетесь на обработку персональных данных</p>
         <button @click="handleSubmit" class="button">Отправить</button>
@@ -29,22 +29,27 @@ async function  handleSubmit(){
         return
     }
     error.value=false
-    await $fetch('api/message', {  headers: {
-      'Content-Type': 'application/json'
-      // 'Content-Type': 'application/x-www-form-urlencoded',
-    },method:'POST',body:JSON.stringify({
-   name:name.value,
-   phone:phone.value
-  })})
-    .then((res) => {
+     $fetch(`api/message?name=${name.value}&phone=${phone.value}`, 
+    {
+    //       headers: {
+    //   'Content-Type': 'application/json'
+     
+    // },
+    method:'GET',
+//     body:JSON.stringify({
+//    name:name.value,
+//    phone:phone.value
+//   })
+})
+    // .then((res) => {
       // On clear le formulaire
       name.value = ''
       phone.value = ''
       emit('update:visible',false)
-    })
-    .catch((err) => {
-      console.log(err)
-    })
+    // })
+    // .catch((err) => {
+    //   console.log(err)
+    // })
 }
 </script>
 

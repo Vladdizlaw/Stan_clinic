@@ -27,7 +27,7 @@ export default defineNuxtConfig({
     axios: {
         baseURL: '/'
       },
-    serverMiddleware: [
-        { path: "/api", handler: "~/api/index.js" },
-      ],
+    // serverMiddleware: [
+    //     { path: "/api", handler: "~/api/index.js" },
+    //   ],
 })
