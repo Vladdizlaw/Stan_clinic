@@ -1,19 +1,9 @@
-//  import express from "express";
-//   import bodyParser from 'body-parser';
+
   import nodemailer from 'nodemailer';
 export default  defineEventHandler(async(data) => {
 
  
-  // const app = express();
- 
   
-  // // 
-  // app.use(bodyParser.urlencoded({ extended: false }))
-  // app.use(bodyParser.json())
-  
-  // app.post('/message', async (req, res) => {
-   
-  // data=JSON.parse(data)
    
     const name =data.req.url.split('?')[1].split('&')[0].split('=')[1]
     const phone =data.req.url.split('?')[1].split('&')[1].split('=')[1]
