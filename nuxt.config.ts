@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     plugins: [
         '@/plugins/vmask.js',
       ],
-      ssr: true,
+      ssr: false,
       target: 'server',
     
     axios: {
