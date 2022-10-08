@@ -38,5 +38,5 @@ export default  defineEventHandler(async(data) => {
    console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info))
  
   //  res.redirect(200, '/contact')
- 
+ return 'OK'
   })

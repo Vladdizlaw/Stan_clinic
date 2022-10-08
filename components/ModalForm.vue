@@ -14,7 +14,7 @@
 
 <script setup>
 // import {ref,defineEmits,defineProps} from "vue"
-import axios from 'axios'
+// import axios from 'axios'
 const props=defineProps({'visible':{type:Boolean}})
 const emit=defineEmits(['update:visible','submit'])
 let name=ref('')
@@ -29,7 +29,8 @@ async function  handleSubmit(){
         return
     }
     error.value=false
-    await $fetch(`api/message?name=${name.value}&phone=${phone.value}`)
+    await $fetch('api/message?name='+ name.value+'&phone=$'+phone.value)
+    // await $fetch(`api/message?name=${name.value}&phone=${phone.value}`)
     // {
     //       headers: {
     //   'Content-Type': 'application/json'
