@@ -29,18 +29,18 @@ async function  handleSubmit(){
         return
     }
     error.value=false
-    await $fetch(`api/message?name=${name.value}&phone=${phone.value}`, 
-    {
+    await $fetch(`api/message?name=${name.value}&phone=${phone.value}`)
+    // {
     //       headers: {
     //   'Content-Type': 'application/json'
      
     // },
-    method:'GET',
+    // method:'GET',
 //     body:JSON.stringify({
 //    name:name.value,
 //    phone:phone.value
 //   })
-})
+// })
     // .then((res) => {
       // On clear le formulaire
       name.value = ''
