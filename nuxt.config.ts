@@ -21,13 +21,13 @@ export default defineNuxtConfig({
     plugins: [
         '@/plugins/vmask.js',
       ],
-      ssr: false,
+      ssr: true,
       target: 'static',
     
     axios: {
         baseURL: '/'
       },
-    serverMiddleware: [
-        { path: "/api", handler: "~/api/index.js" },
-      ],
+    // serverMiddleware: [
+    //     { path: "/api", handler: "~/api/index.js" },
+    //   ],
 })
