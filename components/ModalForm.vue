@@ -29,10 +29,10 @@ async function  handleSubmit(){
         return
     }
     error.value=false
-    await fetch('http://rad-elf-995acd.netlify.app:3200/api/message', {  headers: {
+    await axios.post('http://rad-elf-995acd.netlify.app:3200/api/message', {  headers: {
       'Content-Type': 'application/json'
       // 'Content-Type': 'application/x-www-form-urlencoded',
-    },method:'POST',body:JSON.stringify({
+    },body:JSON.stringify({
    name:name.value,
    phone:phone.value
   })})
