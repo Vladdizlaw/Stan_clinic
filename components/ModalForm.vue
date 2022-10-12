@@ -29,12 +29,12 @@ async function  handleSubmit(){
         return
     }
     error.value=false
-    await axios.post('https://stan-clinic-back.herokuapp.com/api/message', {  headers: {
+    await fetch('https://stan-clinic-back.herokuapp.com:7005/api/message', {  headers: {
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
    
       // 'Content-Type': 'application/x-www-form-urlencoded',
-    },body:JSON.stringify({
+    },method:'POST',body:JSON.stringify({
    name:name.value,
    phone:phone.value
   })})
