@@ -29,8 +29,10 @@ async function  handleSubmit(){
         return
     }
     error.value=false
-    await axios.post('http://rad-elf-995acd.netlify.app:3200/api/message', {  headers: {
-      'Content-Type': 'application/json'
+    await axios.post('https://stan-clinic-back.herokuapp.com/api/message', {  headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+   
       // 'Content-Type': 'application/x-www-form-urlencoded',
     },body:JSON.stringify({
    name:name.value,
