@@ -29,7 +29,7 @@ async function  handleSubmit(){
         return
     }
     error.value=false
-    await fetch('https://stan-clinic-back.herokuapp.com:7005/api/message', {  headers: {
+    await $fetch('https://stan-clinic-back.herokuapp.com/api/message', {  headers: {
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
    
