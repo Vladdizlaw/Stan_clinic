@@ -14,7 +14,7 @@
 
 <script setup>
 // import {ref,defineEmits,defineProps} from "vue"
-import axios from 'axios'
+// import axios from 'axios'
 const props=defineProps({'visible':{type:Boolean}})
 const emit=defineEmits(['update:visible','submit'])
 let name=ref('')
