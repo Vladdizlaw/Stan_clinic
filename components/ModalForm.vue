@@ -110,6 +110,7 @@ async function handleSubmit() {
     top: 1rem;
     right: 1rem;
     width: 1rem;
+    cursor: pointer;
 }
 
 .message {
