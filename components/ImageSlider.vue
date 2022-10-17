@@ -29,7 +29,7 @@ const srcIndex = ref(0)
 
         <div class="lg:w-[42vw] sm:w-[4vw]">
 
-            <img :src="props.srcs[srcIndex]" alt="" class="w-full">
+            <img :src="props.srcs[srcIndex]" alt="" class="w-full img">
 
         </div>
         <svg class="btn ml-5 cursor-pointer absolute  right-[-5rem]" @click="0<srcIndex?srcIndex--:srcIndex=props.srcs.length-1" width="39"
@@ -44,7 +44,9 @@ const srcIndex = ref(0)
 .main{
     width:100%;
 }
-
+.img{
+    user-select: none;
+}
 .btn {
     top:42%;
 
