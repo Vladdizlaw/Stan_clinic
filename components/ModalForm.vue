@@ -24,7 +24,7 @@ let error = ref(false)
 async function handleSubmit() {
     if (!name.value || !phone.value) {
         error.value = true
-        setTimeout(() => {
+        setTimeout(()=> {
             error.value = false
         }, 1000)
         return
