@@ -12,6 +12,10 @@ let isMounted = ref(false)
 let hints = ref('data_1')
 
 onMounted(() => {
+  window.scrollTo({
+    top: -100,
+  
+});
   isMounted.value = true
 
 })
@@ -862,7 +866,9 @@ function changeVisibility(hint) {
     padding: 1rem 0.5rem;
   }
 }
-
+.main-fourth__title{
+  width:90%;
+}
 .main-fourth__title h1 {
   font-size: max(2vw, 1.4rem);
   font-weight: 600;
