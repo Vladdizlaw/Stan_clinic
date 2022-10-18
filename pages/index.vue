@@ -739,7 +739,7 @@ function changeVisibility(hint) {
   }
 
   .main-second-text__title {
-    width: 100%;
+    width: 90%;
     line-height: 2rem;
   }
 
