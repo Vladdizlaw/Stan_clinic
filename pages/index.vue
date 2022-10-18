@@ -102,7 +102,7 @@ function changeVisibility(hint) {
           <div class=" flex flex-row  gap-2 main-third-text__text">
             <h1 class="text-[3rem] text-[#206891]">Реабилитация</h1>
             <p @click="opensFlag[1]=!opensFlag[1]"
-              class="text-[1.5rem] mt-4 text-[#206891] hover:underline  hover:drop-shadow-md duration-200 cursor-pointer">
+              class="closed text-[1.5rem] mt-4 text-[#206891] hover:underline  hover:drop-shadow-md duration-200 cursor-pointer">
               <span v-if="!opensFlag[1]">подробно</span><span v-if="opensFlag[1]" class="text-[#009748]">свернуть</span>
             </p>
           </div>
@@ -167,7 +167,7 @@ function changeVisibility(hint) {
           <div class=" flex gap-2 main-third-text__text">
             <h1 class="text-[3rem] text-[#206891]">Детокс</h1>
             <p @click="opensFlag[2]=!opensFlag[2]"
-              class="text-[1.5rem] mt-4 text-[#206891] hover:underline  hover:drop-shadow-md duration-200 cursor-pointer">
+              class="closed text-[1.5rem] mt-4 text-[#206891] hover:underline  hover:drop-shadow-md duration-200 cursor-pointer">
               <span v-if="!opensFlag[2]">подробно</span><span v-if="opensFlag[2]" class="text-[#009748]">свернуть</span>
             </p>
           </div>
@@ -198,7 +198,7 @@ function changeVisibility(hint) {
           <div class=" flex gap-2 main-third-text__text">
             <h1 class="text-[3rem] text-[#206891]">Вывод из запоя</h1>
             <p @click="opensFlag[3]=!opensFlag[3]"
-              class="text-[1.5rem] mt-4 text-[#206891] hover:underline  hover:drop-shadow-md duration-200 cursor-pointer">
+              class="closed text-[1.5rem] mt-4 text-[#206891] hover:underline  hover:drop-shadow-md duration-200 cursor-pointer">
               <span v-if="!opensFlag[3]">подробно</span><span v-if="opensFlag[3]" class="text-[#009748]">свернуть</span>
             </p>
           </div>
@@ -234,7 +234,7 @@ function changeVisibility(hint) {
           <div class=" flex gap-2 main-third-text__text">
             <h1 class=" text-[#206891]">Кодирование от алкоголизма</h1>
             <p @click="opensFlag[4]=!opensFlag[4]"
-              class="text-[1.5rem] mt-4 text-[#206891] hover:underline  hover:drop-shadow-md duration-200 cursor-pointer">
+              class="closed text-[1.5rem] mt-4 text-[#206891] hover:underline  hover:drop-shadow-md duration-200 cursor-pointer">
               <span v-if="!opensFlag[4]">подробно</span><span v-if="opensFlag[4]" class="text-[#009748]">свернуть</span>
             </p>
           </div>
@@ -825,6 +825,9 @@ function changeVisibility(hint) {
 }
 
 @media (max-width: 666px) {
+  .closed{
+    margin-top:-1rem;
+  }
   .main-third {
 
     align-items: center;
@@ -842,12 +845,12 @@ function changeVisibility(hint) {
   }
 
   .main-third__page {
-    padding-left: 2rem;
+    padding-left: 1rem;
 
   }
 
   .main-third-text__open {
-    width: 100%;
+    width: 80%;
     margin-left: 1rem;
     overflow: auto;
     height: 50vh;
@@ -904,6 +907,9 @@ function changeVisibility(hint) {
   .main-five__content {
     width: 95%;
     vertical-align:middle;
+  }
+  .image{
+    margin-top:-20rem;
   }
 
 }

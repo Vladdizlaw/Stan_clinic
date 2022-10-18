@@ -58,7 +58,7 @@ const srcIndex = ref(0)
     }
     .btn{
         transform:scale(0.5);
-        top:1%;
+        top:15%;
     }
   
 }
