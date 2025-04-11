@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
         <div class="flex flex-col items-center justify-center modal">
-            <img src="../assets/close.svg" class="close" @click="emit('update:visible',false)" />
+            <img src="../assets/close.svg" class="close" @click="emit('update:visible', false)" />
             <p class="title">Записаться</p>
             <input class="input" placeholder="Имя" v-model="name" />
             <input v-maska="'+7(###)###-##-##'" class="input" placeholder="Номер телефона" v-model="phone" />
@@ -24,34 +24,37 @@ let error = ref(false)
 async function handleSubmit() {
     if (!name.value || !phone.value) {
         error.value = true
-        setTimeout(()=> {
+        setTimeout(() => {
             error.value = false
         }, 1000)
         return
     }
     error.value = false
-    await $fetch('https://stan-clinic-back.herokuapp.com/api/message', {
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods':'*',
-            'Access-Control-Allow-Headers':'content-type',
+    // await $fetch('https://stan-clinic-back.herokuapp.com/api/message', {
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //         'Access-Control-Allow-Origin': '*',
+    //         'Access-Control-Allow-Methods':'*',
+    //         'Access-Control-Allow-Headers':'content-type',
 
-            // 'Content-Type': 'application/x-www-form-urlencoded',
-        }, method: 'POST', body: JSON.stringify({
-            name: name.value,
-            phone: phone.value
-        })
-    })
-        .then((res) => {
-            // On clear le formulaire
-            name.value = ''
-            phone.value = ''
-            emit('update:visible', false)
-        })
-        .catch((err) => {
-            console.log(err)
-        })
+    //         // 'Content-Type': 'application/x-www-form-urlencoded',
+    //     }, method: 'POST', body: JSON.stringify({
+    //         name: name.value,
+    //         phone: phone.value
+    //     })
+    // })
+    //     .then((res) => {
+    //         // On clear le formulaire
+    //         name.value = ''
+    //         phone.value = ''
+    //         emit('update:visible', false)
+    //     })
+    //     .catch((err) => {
+    //         console.log(err)
+    //     })
+    name.value = ''
+    phone.value = ''
+    emit('update:visible', false)
 }
 </script>
 

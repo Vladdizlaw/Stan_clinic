@@ -71,9 +71,9 @@ function changeVisibility(hint) {
     </main>
     <main id="page2" data="data_2" class="main-second min-h-[100vh]  relative">
       <div class="absolute top-0  left-0"></div>
-      <div class="main-second-text">
+      <div class="main-second-text ">
         <p class="main-second-text__title">Услуги <br />центра социальной адаптации</p>
-        <div class="main-second-text__center flex flex-col mt-[3rem]  gap-[3rem]">
+        <div class="main-second-text__center flex flex-col mt-[3rem]  gap-[3rem]  max-w-[100%]">
 
           <p>Реабилитация:</p>
           <div class="main-second-text__div flex-col flex mt-[-2rem]  ml-[-3rem] gap-5">
@@ -83,7 +83,7 @@ function changeVisibility(hint) {
             <p>помощь при анарексии</p>
             <p>корекция девиантного поведения</p>
           </div>
-          <p>Профессиональная сопроводительная терапия</p>
+          <p class="w-full">Профессиональная сопроводительная терапия</p>
           <p>Психологическая поддержка</p>
         </div>
       </div>
@@ -701,7 +701,7 @@ function changeVisibility(hint) {
 }
 
 .main-second {
-  width: 100%;
+  width: 100vw;
   /* height: 100vh; */
   background: url('../assets/main2.png');
   background-size: cover;
@@ -715,6 +715,7 @@ function changeVisibility(hint) {
 }
 
 .main-second-text {
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -752,6 +753,8 @@ function changeVisibility(hint) {
   flex-direction: column;
   align-items: flex-start;
 
+
+
 }
 
 .main-second-text__center>p {
@@ -762,7 +765,8 @@ function changeVisibility(hint) {
   /* line-height: 1rem; */
   text-align: center;
   color: #206891;
-  white-space: nowrap;
+  white-space: collapse;
+  text-align: left;
   /* margin-top:-0.2rem; */
 
 
@@ -788,6 +792,7 @@ function changeVisibility(hint) {
   .main-second {
     gap: 1rem;
     padding: 0;
+    width: 100%;
     /* justify-content: space-around; */
     align-items: center;
     /* min-height:150vh; */
@@ -802,7 +807,7 @@ function changeVisibility(hint) {
   }
 
   .main-second-text__title {
-    width: 90%;
+    width: 100%;
     line-height: 2rem;
   }
 
